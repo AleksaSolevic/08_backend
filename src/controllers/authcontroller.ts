@@ -8,9 +8,6 @@ dotenv.config();
 
 const SECRET_KEY = process.env.JWT_SECRET as string;
 
-
-console.log("SECRET_KEY", SECRET_KEY);
-
 if (!SECRET_KEY) {
   throw new Error("JWT_SECRET is not defined in .env file");
 }
