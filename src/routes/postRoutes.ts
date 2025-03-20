@@ -6,10 +6,10 @@ import { validatePost } from "../middleware/validatePost";
 
 const router = express.Router();
 
-router.post("/", authenticateUser,validatePost, createPost);
+router.post("/", authenticateUser, validatePost, createPost);
 router.get("/", getAllPosts);
 router.get("/:id", getOnePost);
-router.put("/:id",authenticateUser,  validatePost,updatePost);
-router.delete("/:id",authenticateUser, validatePost,deletePost);
+router.put("/:id",authenticateUser, validatePost, updatePost);
+router.delete("/:id",authenticateUser, validatePost, deletePost);
 
 export default router;
